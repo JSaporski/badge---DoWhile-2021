@@ -121,7 +121,7 @@ ul {
   .container:before {
     content: '';
     position: absolute;
-    top: -18rem;
+    top: -18.7rem;
     width: 4rem;
     height: 20rem;
     z-index: 1;
