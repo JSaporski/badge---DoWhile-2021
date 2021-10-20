@@ -1,0 +1,155 @@
+/* General Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+html,
+body {
+  --black: hsl(240, 6%, 8%);
+  --grey: hsl(240, 9%, 89%);
+  --light-grey: hsl(240, 7%, 78%);
+  height: 100%; /* Essa é a maneira mais fácil de conseguir sempre posicionar um único item de uma página ao centro dela */
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+/* Main Content */
+
+main,
+.container {
+  display: grid;
+  place-items: center;
+}
+
+main {
+  width: 375px;
+  height: 812px;
+  background: url('../img/background.svg') no-repeat;
+}
+
+.container {
+  max-width: 250px;
+}
+
+.avatar {
+  position: relative;
+  margin: 3rem 0 1.5rem 0;
+}
+
+.avatar span img {
+  position: absolute;
+  top: -25px;
+  z-index: 1;
+}
+
+.avatar > img {
+  position: relative;
+  top: -0.6875rem;
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+h1,
+p {
+  color: var(--grey);
+}
+
+h1 {
+  margin-bottom: 0.25rem;
+  font-size: 1.5rem;
+  line-height: 30px;
+  text-align: center;
+}
+
+a {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  line-height: 26px;
+  text-decoration: none;
+  color: var(--light-grey);
+}
+
+a:hover {
+  color: hsl(255, 100%, 100%);
+  transition: 0.3s ease-out;
+}
+
+p {
+  margin-bottom: 4rem;
+  font-size: 0.875rem;
+  line-height: 24px;
+  text-align: center;
+}
+
+ul {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+@media only screen and (min-width: 376px) and (max-width: 480px) {
+  main {
+    width: 480px;
+    background-size: cover;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 2652px) {
+  body {
+    background: url('../img/background-body.png') no-repeat var(--black);
+    background-size: cover;
+  }
+
+  .container:before {
+    content: '';
+    position: absolute;
+    top: -18rem;
+    width: 4rem;
+    height: 20rem;
+    z-index: 1;
+    background: linear-gradient(161.24deg, #ff008e -15.25%, #ffcd1e 111.89%);
+  }
+
+  main {
+    width: 358px;
+    height: 540px;
+    background: url('../img/background-desktop.png') no-repeat;
+    position: relative;
+  }
+
+  p {
+    margin-bottom: 2.5rem;
+  }
+
+  .avatar:before {
+    content: '';
+    position: absolute;
+    display: block;
+    right: 40px;
+    top: -55px;
+    width: 5rem;
+    height: 0.5rem;
+    background: var(--black);
+  }
+
+  .avatar {
+    margin-top: 4.5rem;
+  }
+}
