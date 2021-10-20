@@ -52,7 +52,7 @@ main {
 
 .avatar span img {
   position: absolute;
-  top: -25px;
+  top: -13px;
   z-index: 1;
 }
 
@@ -105,7 +105,7 @@ ul {
 
 @media only screen and (min-width: 376px) and (max-width: 480px) {
   main {
-    width: 480px;
+    max-width: 480px;
     background-size: cover;
   }
 }
