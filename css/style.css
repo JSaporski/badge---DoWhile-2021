@@ -116,9 +116,13 @@ ul {
     background-size: cover;
   }
 
-  .container:before {
+  .container:before,
+  .avatar:before {
     content: '';
     position: absolute;
+  }
+
+  .container:before {
     top: -18.7rem;
     width: 4rem;
     height: 20rem;
@@ -138,8 +142,6 @@ ul {
   }
 
   .avatar:before {
-    content: '';
-    position: absolute;
     display: block;
     right: 40px;
     top: -55px;
